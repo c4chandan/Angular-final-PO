@@ -1,0 +1,52 @@
+
+<style>
+table th {
+    text-align: center; 
+ }
+ 
+ .table {
+    margin: auto;
+    width: 50% !important; 
+ }
+</style>
+ <table class="table table-hover">
+    <tbody>
+    <tr>
+        <td><label>Select Products</label></td>
+<td>  <label>Quantity</label></td>
+    </tr>
+    <tr>
+        <td>
+                <select class="form-control" name="items">
+                        <option value="">Select your products</option>
+                        <option *ngFor="let p of productArray; let i = index">{{p.productName}}</option>
+                    </select>
+        </td>
+        <td>
+                <input type="number" value="quantity" class="form-control"  id="quantity" placeholder="Quantity"></td>
+       
+    </tr>
+<tr>
+    <td></td>
+    <td>
+    </td>
+    
+    <td>
+            <input type="button" value="Add" id="portests" class="btnm btn-success form-control">
+    </td>
+</tr>
+<tr>
+        <td></td>
+        <td>
+        </td>
+        
+        <td>
+                <input type="submit" value="submit" class="btnm btn-primary form-control">
+        </td>
+    </tr>
+</tbody>
+</table>
+
+
+
+   

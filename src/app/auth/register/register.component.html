@@ -1,0 +1,72 @@
+
+
+
+        <p class="display-3">Registration</p>
+<form [formGroup]="RegisterForm" (ngSubmit)="onSubmit()">
+  
+    <table class="table table-hover table-responsive">
+        <tbody>
+            <tr class="form-group">
+                <td> <label>User Name</label></td>
+                <td>  <input type="text" class="form-control" formControlName="userName"  
+              
+                  [class.is-invalid]="username.invalid && username.touched">
+                   <small class="text-danger" [class.d-none]="username.valid ||username.untouched">
+                      username is required..
+                   </small>
+                </td>
+            </tr>
+            <tr class="form-group">
+                <td> <label>Email</label></td>
+                <td><input type="text" class="form-control" formControlName="userEmail"  
+                
+                  [class.is-invalid]="useremail.invalid && useremail.touched">
+                   <small class="text-danger" [class.d-none]="useremail.valid ||useremail.untouched">
+                      userEmail is required..
+                   </small>
+                </td>
+            </tr>
+            <tr class="form-group">
+                <td> <label>Password:</label></td>
+                <td>   <input type="password" class="form-control" formControlName="userPassword"  
+                    
+                  [class.is-invalid]="password.invalid && password.touched">
+                   <small class="text-danger" [class.d-none]="password.valid ||password.untouched">
+                    password is required..
+                   </small>
+
+                </td>
+            </tr>
+            <tr class="form-group">
+                <td> <label>address:</label></td>
+                <td>  <input type="text" class="form-control" formControlName="userAddress"  
+                
+                  [class.is-invalid]="useraddress.invalid && useraddress.touched">
+                   <small class="text-danger" [class.d-none]="useraddress.valid ||useraddress.untouched">
+                     Address is required..
+                   </small>
+                </td>
+            </tr>
+        
+            <tr class="form-group">
+                <td><label>Mobile No :</label></td>
+                <td>  <input type="text" class="form-control" formControlName="userMobile"  
+                
+                  [class.is-invalid]="usermobile.invalid && usermobile.touched">
+                   <small class="text-danger" [class.d-none]="usermobile.valid ||usermobile.untouched">
+                      Mobile no is required..
+                   </small>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td> <input type="submit" class="btn btn-primary" [disabled]="RegisterForm.invalid" value="Submit"></td>
+ 
+            </tr>
+        </tbody>
+    </table>
+
+</form>
