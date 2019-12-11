@@ -5,8 +5,7 @@ import { RaisePOComponent } from './raise-po/raise-po.component';
 
 const routes: Routes = [
   {path:'raisepo',component:RaisePOComponent}
-
-];
+  ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

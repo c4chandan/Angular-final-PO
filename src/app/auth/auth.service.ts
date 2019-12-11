@@ -18,6 +18,6 @@ export class AuthService {
 
   validateUser(userEmail: any, userPass: any): Observable<any> {
     return this.http.post<any>("http://localhost:1234/purchaseOrderFrontend/userValidate?userEmail="
-      + userEmail + "&&userPass=" + userPass, null, { responseType: 'text' as 'json' });
+      + userEmail + "&&userPass=" + userPass, null);
   }
 }

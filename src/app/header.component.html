@@ -13,15 +13,20 @@
               </li>
               <li class="nav-item">
                   <a class="nav-link" routerLink="#">Contact Us</a>
-              </li>
+                  </li>
+                  
+                  <li class="nav-item">
+                        <a class="nav-link" routerLink="/raisepo" *ngIf="router.url==='/buyerPage'||router.url==='/raisepo'">raisePo</a>
+                    </li>
 
           </ul>
           <ul class="navbar-nav">
                   <li class="nav-item"  data-toggle="modal" data-target="#myModal">
-                  <a class="nav-link" routerLink="/login">Login</a>
+                  <a class="nav-link" routerLink="/login" *ngIf="router.url==='/'||router.url==='/login'">Login</a>
               </li>
+             
               <li class="nav-item">
-                  <a class="nav-link" routerLink="/register">Register</a>
+                  <a class="nav-link" routerLink="/register" *ngIf="router.url==='/'||router.url==='/register'" >Register</a>
               </li>
           </ul>
       </div>

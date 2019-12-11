@@ -15,7 +15,12 @@ getAllProducts():Observable<any>
   return this.http.get(this.url);
 }
 
+raisePoForm(poArr:any,uId:number)
 
+{
+  return this.http.post<any>("http://localhost:1234/purchaseOrderFrontend/raisePurchaseOrder/"+uId,poArr);
+
+}
 }
 
 
