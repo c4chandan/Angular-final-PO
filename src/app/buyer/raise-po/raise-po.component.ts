@@ -4,6 +4,7 @@ import { Product } from 'src/models/Product';
 
 
 import { FormGroup, FormControl } from '@angular/forms';
+import { LocationStrategy } from '@angular/common';
 
 @Component({
   selector: 'app-raise-po',
@@ -14,7 +15,12 @@ export class RaisePOComponent implements OnInit {
   public pro: number;
   public quantity: number;
 
-  constructor(private buyerService: BuyerService) { }
+  constructor(private buyerService: BuyerService,private location: LocationStrategy) {
+    history.pushState(null, null, window.location.href);
+    this.location.onPopState(() => {
+      history.pushState(null, null, window.location.href);
+    });
+   }
   public productArray: any;
   ngOnInit() {
 

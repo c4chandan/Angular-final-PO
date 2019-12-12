@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { LocationStrategy } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,13 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'AngularConnect';
 
-constructor(private router:Router){}
+constructor(private router:Router,private location: LocationStrategy){
+
+  history.pushState(null, null, window.location.href);
+  this.location.onPopState(() => {
+    history.pushState(null, null, window.location.href);
+  });
+}
 
 isHomeRoute(){
  return this.router.url==='/';

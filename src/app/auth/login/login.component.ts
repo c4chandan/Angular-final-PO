@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import { LocationStrategy } from '@angular/common';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,13 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router,private location: LocationStrategy) { 
+
+     history.pushState(null, null, window.location.href);
+      this.location.onPopState(() => {
+        history.pushState(null, null, window.location.href);
+      }); 
+  }
 
   ngOnInit() {
   }

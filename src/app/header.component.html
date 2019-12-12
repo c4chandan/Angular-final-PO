@@ -9,14 +9,7 @@
             <li class="nav-item active">
                 <a class="nav-link" routerLink="/" routerLinkActive="active">Home </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="#">About Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="#">Contact Us</a>
-            </li>
-
-            <li class="nav-item">
+                     <li class="nav-item">
                 <a class="nav-link" routerLink="/raisepo"
                     *ngIf="router.url==='/buyerPage'||router.url==='/raisepo'">raisePo</a>
             </li>
@@ -54,7 +47,7 @@
                     *ngIf="router.url==='/'||router.url==='/register'||router.url==='/login'">Register</a>
 
             </li>
-            <li class="nav-item"><a class="nav-link" (click)="logout()">Logout</a></li>
+            <li class="nav-item"><a class="nav-link" (click)="logout()" *ngIf="router.url==='/buyerPage'||router.url==='/logout()'||router.url==='/sellerPage'||router.url==='/vendorPage'||router.url==='/viewVendorProducts'||router.url==='/showPo'||router.url==='/raisepo'">Logout</a></li>
         </ul>
     </div>
 </nav>
