@@ -13,6 +13,7 @@ import { BuyerModule } from './buyer/buyer.module';
 import { PageNotFoundComponent } from './pageNotFound/page-not-found.component';
 import { VendorComponent } from './vendor/vendor/vendor.component';
 import { LogoutComponent } from './logout/logout.component';
+import { SellerModule } from './seller/seller.module';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { LogoutComponent } from './logout/logout.component';
     BrowserModule,
     AppRoutingModule,
     AuthModule,
-    HttpClientModule,BuyerModule,   FormsModule
+    HttpClientModule,BuyerModule,   FormsModule,SellerModule
    
     
   ],

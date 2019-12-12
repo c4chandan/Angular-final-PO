@@ -22,16 +22,18 @@
           </ul>
           <ul class="navbar-nav">
                   <li class="nav-item"  data-toggle="modal" data-target="#myModal">
-                  <a class="nav-link" routerLink="/login" *ngIf="router.url==='/'||router.url==='/login'">Login</a>
+                  <a class="nav-link" routerLink="/login" *ngIf="router.url==='/'||router.url==='/login'||router.url==='/register'">Login</a>
               </li>
              
               <li class="nav-item">
-                  <a class="nav-link" routerLink="/register" *ngIf="router.url==='/'||router.url==='/register'" >Register</a>
+                  <a class="nav-link" routerLink="/register" *ngIf="router.url==='/'||router.url==='/register'||router.url==='/login'" >Register</a>
+
               </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/showPo" *ngIf="router.url==='/sellerPage'||router.url==='/showPo'" >showPo</a>
+            </li>
           </ul>
       </div>
   </nav>
 <br/>
-
-
-  <router-outlet></router-outlet>

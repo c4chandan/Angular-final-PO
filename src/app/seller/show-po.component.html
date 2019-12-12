@@ -1,0 +1,27 @@
+<p class="display-3">show-po works!</p>
+<table class="table table-hover table-warning">
+    <tbody>
+        <tr>
+            <th><label>products Id</label></th>
+            
+            <th><label>products Status</label></th>
+            
+            <th><label>products createdDate</label></th>
+            
+            <th><label>products quantity</label></th>
+            <!-- <th> <label>Products name</label></th> -->
+        </tr>
+        <tr *ngFor="let arr of productArray">
+            <td>
+                {{arr.purchaseOrderId}}
+            </td>
+            <td>
+                {{arr.status}}
+            </td>
+            <td> {{arr.createdDate}}</td>
+            <td> {{arr.quantity}}</td>
+            
+            
+        </tr>
+           </tbody>
+</table>
