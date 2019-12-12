@@ -1,39 +1,61 @@
-  <nav class="navbar navbar-expand-lg navbar-dark bg-info">
-      <a class="navbar-brand" href="#">PurchaseOrder</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div id="navbarNavDropdown" class="navbar-collapse collapse">
-          <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                  <a class="nav-link" routerLink="/" routerLinkActive="active">Home </a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" routerLink="#">About Us</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" routerLink="#">Contact Us</a>
-                  </li>
-                  
-                  <li class="nav-item">
-                        <a class="nav-link" routerLink="/raisepo" *ngIf="router.url==='/buyerPage'||router.url==='/raisepo'">raisePo</a>
-                    </li>
-
-          </ul>
-          <ul class="navbar-nav">
-                  <li class="nav-item"  data-toggle="modal" data-target="#myModal">
-                  <a class="nav-link" routerLink="/login" *ngIf="router.url==='/'||router.url==='/login'||router.url==='/register'">Login</a>
-              </li>
-             
-              <li class="nav-item">
-                  <a class="nav-link" routerLink="/register" *ngIf="router.url==='/'||router.url==='/register'||router.url==='/login'" >Register</a>
-
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/showPo" *ngIf="router.url==='/sellerPage'||router.url==='/showPo'" >showPo</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <a class="navbar-brand" href="#">PurchaseOrder</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarNavDropdown" class="navbar-collapse collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="/" routerLinkActive="active">Home </a>
             </li>
-          </ul>
-      </div>
-  </nav>
-<br/>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="#">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="#">Contact Us</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/raisepo"
+                    *ngIf="router.url==='/buyerPage'||router.url==='/raisepo'">raisePo</a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/showPo"
+                    *ngIf="router.url==='/sellerPage'||router.url==='/showPo'">showPo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/viewVendorProducts"
+                    *ngIf="router.url==='/vendorPage'||router.url==='/viewVendorProducts'">Products</a>
+            </li>
+<!-- 
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/ViewAllProducts"
+                    *ngIf="router.url==='/vendorPage'||router.url==='/viewVendorProducts'||router.url==='/viewVendorProducts'||router.url==='/ViewAllProducts'">viewVendorProducts</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/addProductQuantity"
+                    *ngIf="router.url==='/vendorPage'||router.url==='/addProductQuantity'||router.url==='/viewVendorProducts'||router.url==='/ViewAllProducts'">ViewAllProducts</a>
+            </li> -->
+
+
+        </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item" data-toggle="modal" data-target="#myModal">
+                <a class="nav-link" routerLink="/login"
+                    *ngIf="router.url==='/'||router.url==='/login'||router.url==='/register'">Login</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/register"
+                    *ngIf="router.url==='/'||router.url==='/register'||router.url==='/login'">Register</a>
+
+            </li>
+            <li class="nav-item"><a class="nav-link" (click)="logout()">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<br />

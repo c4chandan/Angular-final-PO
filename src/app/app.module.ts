@@ -11,20 +11,23 @@ import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BuyerModule } from './buyer/buyer.module';
 import { PageNotFoundComponent } from './pageNotFound/page-not-found.component';
-import { VendorComponent } from './vendor/vendor/vendor.component';
 import { LogoutComponent } from './logout/logout.component';
 import { SellerModule } from './seller/seller.module';
+import { ViewAllProductsComponent } from './vendor/view-all-products.component';
+import { VendorModule } from './vendor/vendor/vendor.module';
+import { VendorProductsComponent } from './vendor/vendor-products.component';
+import { AddProductsComponent } from './vendor/add-products.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,HeaderComponent,BannerComponent,FooterComponent, PageNotFoundComponent, VendorComponent, LogoutComponent
+    AppComponent,HeaderComponent,BannerComponent,FooterComponent, PageNotFoundComponent, LogoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AuthModule,
-    HttpClientModule,BuyerModule,   FormsModule,SellerModule
+    HttpClientModule,BuyerModule,   FormsModule,SellerModule,VendorModule
    
     
   ],

@@ -12,9 +12,6 @@ import { SellerRoutingModule } from './seller-routing.module';
   imports: [
     CommonModule,
     SellerRoutingModule
-    
-  
-    
   ],
   exports: [
     SellerComponent

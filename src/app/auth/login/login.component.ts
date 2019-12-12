@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
 
         }
         else if (userObj.userRole == 'Vendor') {
-          this.router.navigate(['./venderPage']);
+          this.router.navigate(['./vendorPage']);
         }
         else {
           alert("invalid!");

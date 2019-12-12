@@ -1,0 +1,34 @@
+<div class="container">
+    <h1 class="alert alert-primary" align="center">Product List</h1>
+    
+    <table class="table table-borderless  table table-hover table-info">
+        <thead class="table-danger">
+            <tr>
+                <th >Product Id</th>
+                
+                <th >Product Name</th>
+                <th >products Price</th>
+                <th >products desc</th>
+
+            </tr>
+        </thead>
+        <tbody>
+         
+            <tr *ngFor="let p of productArray">
+                <td>
+                    {{p.productId}}
+                </td>
+                <td>
+                    {{p.productName}}
+                </td>
+                          <td>
+                    {{p.productDesc}}
+                </td>
+                <td>
+                    {{p.productPrice}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
